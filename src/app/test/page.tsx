@@ -1,17 +1,11 @@
-"use client";
-import React, { useEffect } from "react";
-
+import ClientComponent from "./client";
+import ServerComponent from "./test.server";
 const test = () => {
-  useEffect(() => {
-    console.log("#");
-  }, []);
-
   return (
-    <>
-      <div>
-        <h1>Hello Bell</h1>
-      </div>
-    </>
+    <ClientComponent>
+      {/* @ts-expect-error Async Server Component */}
+      <ServerComponent />
+    </ClientComponent>
   );
 };
 
