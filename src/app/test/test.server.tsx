@@ -1,3 +1,5 @@
+import { use } from "react";
+
 const fetchData = async () => {
   let data: any = null;
   await fetch("https://jsonplaceholder.typicode.com/todos/1")
@@ -9,8 +11,8 @@ const fetchData = async () => {
   return data;
 };
 
-const apiTest = async (): Promise<React.ReactElement> => {
-  const data = await fetchData();
+const apiTest = (): React.ReactElement => {
+  const data = use(fetchData());
   if (data) {
     return <div>데이터 존재</div>;
   } else {
