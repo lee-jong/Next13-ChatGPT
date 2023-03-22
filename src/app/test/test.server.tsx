@@ -14,9 +14,9 @@ const fetchData = async () => {
 const apiTest = (): React.ReactElement => {
   const data = use(fetchData());
   if (data) {
-    return <div>데이터 존재</div>;
+    return <div>데이터 존재 (RSC)</div>;
   } else {
-    return <div>데이터 미존재</div>;
+    return <div>데이터 미존재 (RSC)</div>;
   }
 };
 
