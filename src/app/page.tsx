@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import styles from "./page.module.css";
-import Card from "../component/common/Card/index";
+import Card from "../component/common/Card";
+import TestButton from "@/component/common/TestButton";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function Home() {
         description=""
         linkUrl="https://www.example.com"
       />
+      <TestButton />
     </main>
   );
 }
